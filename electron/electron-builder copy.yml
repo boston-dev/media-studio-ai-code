@@ -1,0 +1,67 @@
+appId: com.tool8s.mediastudioai          # 原来是 com.electron.app
+productName: Media Studio AI             # 原来是 downler
+
+directories:
+  buildResources: build
+
+files:
+  - '!.vscode/*'
+  - '!src/**'
+  - '!electron.vite.config.{js,ts,mjs,cjs}'
+  - '!{.eslintcache,eslint.config.mjs,.prettierrc.yaml,dev-app-update.yml,CHANGELOG.md,README.md}'
+  - '!{.env,.env.*, .npmrc,pnpm-lock.yaml}'
+  - resources/**
+
+asarUnpack:
+  - resources/**
+
+win:
+  executableName: media-studio-ai        # 原来是 downler.exe
+  target:
+    - nsis                               # 之前已有
+    - msix                               # ⭐ 新增：用于 Microsoft Store
+
+nsis:
+  artifactName: "Media-Studio-AI-${version}-Setup.${ext}"
+  shortcutName: "Media Studio AI"
+  uninstallDisplayName: "Media Studio AI"
+  createDesktopShortcut: always
+
+# ⭐ 新增：专门给 Microsoft Store 用的 MSIX 配置
+msix:
+  displayName: "Media Studio AI"
+  description: "M3U8 视频提取、下载与 AI 工具集"
+  publisherDisplayName: "tool8s"
+
+  # 这两个是占位，等你第一次上传 MSIX 后，微软会给出真实值
+  identityName: "com.tool8s.mediastudioai"
+  publisher: "CN=00000000-0000-0000-0000-000000000000"
+
+mac:
+  entitlementsInherit: build/entitlements.mac.plist
+  extendInfo:
+    - NSCameraUsageDescription: Application requests access to the device's camera.
+    - NSMicrophoneUsageDescription: Application requests access to the device's microphone.
+    - NSDocumentsFolderUsageDescription: Application requests access to the user's Documents folder.
+    - NSDownloadsFolderUsageDescription: Application requests access to the user's Downloads folder.
+  notarize: false
+
+dmg:
+  artifactName: "Media-Studio-AI-${version}.${ext}"
+
+linux:
+  target:
+    - AppImage
+    - snap
+    - deb
+  maintainer: electronjs.org
+  category: Utility
+
+appImage:
+  artifactName: "Media-Studio-AI-${version}.${ext}"
+
+npmRebuild: false
+
+publish:
+  provider: generic
+  url: https://example.com/auto-updates
