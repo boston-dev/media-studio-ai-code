@@ -1,0 +1,143 @@
+
+html,
+body,
+#app,li,ul,div,p,span,i,em,dl,dt,dd ,div,section,header,nav{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+html.dark {
+  background: #222;
+  color: #fff;
+}
+
+a {
+  font-weight: 400;
+  color: var(--el-text-color-primary);
+  text-decoration: none;
+}
+.color-primary{
+  color: var(--el-text-color-primary);
+}
+.active-them{
+  color: var(--el-color-primary);
+}
+body{
+ max-width: 1280px;
+ margin: 0 auto;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+  display: flex;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.center-center {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.align-center {
+  display: flex;
+  align-items: center;
+}
+
+.justify-between,
+.space-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+.justify-end {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.justify-around {
+  display: flex;
+  justify-content: space-around;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.no-shrink {
+  flex-shrink: 0;
+}
+
+.no-grow {
+  flex-grow: 0;
+}
+
+.flex-1 {
+  flex: 1;
+}
+.d-block{
+  display: block;
+}
+.d-flex {
+  display: flex;
+}
+$max: 40;
+$offset: 4;
+$unit: 'px'; // Feel free to change the unit.
+
+@mixin list-loop($className, $styleName) {
+  $i: 0;
+
+  @while $i <=$max {
+    #{$className + $i} {
+      #{$styleName}: #{$i * 1 + $unit} !important; // Added !important
+    }
+
+    $i: $i + $offset;
+  }
+}
+
+// Margins
+@include list-loop('.m-t-', 'margin-top');
+@include list-loop('.m-r-', 'margin-right');
+@include list-loop('.m-b-', 'margin-bottom');
+@include list-loop('.m-l-', 'margin-left');
+@include list-loop('.m-x-', 'margin');
+// Paddings
+@include list-loop('.p-t-', 'padding-top');
+@include list-loop('.p-r-', 'padding-right');
+@include list-loop('.p-b-', 'padding-bottom');
+@include list-loop('.p-l-', 'padding-left');
+@include list-loop('.p-x-', 'padding');
+
+.ellipsis-1 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%; 
+}
+
+/* 顶部进度条颜色/高度 */
+#nprogress .bar {
+  background: #42b883 !important; /* 你想要的品牌色 */
+  height: 3px !important;
+}
+
+/* 右上角小圈圈 (我们关闭了showSpinner=false，如果你打开可以自定义这个) */
+#nprogress .spinner-icon {
+  border-top-color: #42b883 !important;
+  border-left-color: #42b883 !important;
+}
+
+
+.app-container { @apply mx-auto max-w-6xl p-4 md:p-8; }
+.card { @apply border rounded-2xl shadow-card bg-white; }
+.btn { @apply h-10 px-4 rounded-xl inline-flex items-center justify-center; }
+.btn-primary { @apply bg-black text-white disabled:opacity-50; }
+.btn-ghost { @apply border; }
+.badge { @apply text-xs px-2 py-1 rounded-full; }
