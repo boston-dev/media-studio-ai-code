@@ -18,4 +18,23 @@ export default defineNuxtConfig({
   devServer: {
     port: 4391,   // 这里改成你想要的端口
   },
+  app: {
+    head: {
+      script: [
+        {
+          src: 'https://www.googletagmanager.com/gtag/js?id=G-LLRE09KEE4',
+          async: true
+        },
+        {
+          // 注意这里是 innerHTML，不是 children
+          innerHTML: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-LLRE09KEE4');
+          `
+        }
+      ]
+    }
+  }
 })
