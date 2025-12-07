@@ -1,7 +1,8 @@
 <template>
   <MediaClientDownload 
-  :downloadUrl="downloadUrl"
-
+  v-if="config.downloadUrl "
+  :downloadUrl="config.downloadUrl"
+  :version="config.version"
   />
   <div class="w-full min-h-[520px] flex flex-col gap-6">
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-5">
@@ -97,6 +98,11 @@
 </template>
 
 <script setup lang="ts">
+const { t, locale, messages } = useI18n()
+
+console.log('locale =', locale.value)
+console.log('zh messages =', messages.value.zh?.common?.homeTitle)
+
 import MediaClientDownload from "@/components/MediaClientDownload.vue"
 import SupportContactPanel from "@/components/SupportContactPanel.vue"
 import { ElMessage } from 'element-plus'
@@ -214,4 +220,36 @@ useHead({
     }
   ]
 })
+
+const config=ref({})
+async function fetchClientVersion() {
+  // 1. 自动识别操作系统
+  function getPlatform() {
+    const ua = navigator.userAgent.toLowerCase();
+    if (ua.includes("win")) return "win";
+    if (ua.includes("mac")) return "mac";
+    if (ua.includes("linux")) return "linux";
+    return "unknown";
+  }
+
+  const platform = getPlatform();
+
+  // 2. 调 API
+  const api = `https://tool8s.com/api/version?platform=${platform}`;
+
+  try {
+    const res = await fetch(api);
+    const data = await res.json();
+    config.value=data
+    console.log("客户端最新版本:", config.value);
+    return data;
+  } catch (err) {
+    console.error("版本检查失败:", err);
+  }
+}
+
+fetchClientVersion();
+
+
+
 </script>

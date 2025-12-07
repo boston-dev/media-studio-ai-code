@@ -2,7 +2,7 @@
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
-   modules: ['@element-plus/nuxt','@pinia/nuxt','@nuxtjs/tailwindcss'],
+   modules: ['@nuxtjs/i18n','@element-plus/nuxt','@pinia/nuxt','@nuxtjs/tailwindcss'],
   elementPlus: {
     importStyle: 'css',   // 自动引入样式
     themes: ['dark']   // 需要可开
@@ -17,5 +17,5 @@ export default defineNuxtConfig({
   ],
   devServer: {
     port: 4391,   // 这里改成你想要的端口
-  }
+  },
 })

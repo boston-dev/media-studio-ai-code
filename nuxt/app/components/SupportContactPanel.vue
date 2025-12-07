@@ -18,36 +18,10 @@
       <div
         class="flex flex-col gap-4 md:flex-row md:items-center md:gap-8"
       >
-        <!-- 方式一：扫码加客服 / 公众号 -->
-        <div class="flex items-center gap-3">
-          <div
-            class="flex h-20 w-20 items-center justify-center overflow-hidden rounded-lg border border-slate-200 bg-slate-50"
-          >
-            <img
-              v-if="qrImage"
-              :src="qrImage"
-              alt="客服 / 公众号二维码"
-              class="h-full w-full object-contain"
-            />
-            <span v-else class="text-[10px] text-slate-400 px-1 text-center leading-snug">
-              在 props 里传入<br />qr-image
-            </span>
-          </div>
-          <div class="space-y-1">
-            <p class="text-xs font-medium text-slate-900">
-              方式一：微信扫码联系
-            </p>
-            <p class="text-xs text-slate-600">
-              使用微信扫一扫添加客服 / 关注公众号，发送
-              <span class="font-medium">“Media Studio AI”</span> 说明你的问题。
-            </p>
-          </div>
-        </div>
-
-        <!-- 方式二：邮箱反馈 -->
+       <!-- 方式二：邮箱反馈 -->
         <div class="space-y-2">
           <p class="text-xs font-medium text-slate-900">
-            方式二：发送邮件
+            方式一：发送邮件
           </p>
           <p class="text-xs text-slate-600">
             如需详细描述问题、附带截图或日志，可以通过邮箱联系我们：
@@ -72,6 +46,33 @@
             {{ copyHint }}
           </p>
         </div>
+        <!-- 方式一：扫码加客服 / 公众号 -->
+        <!-- <div class="flex items-center gap-3">
+          <div
+            class="flex h-20 w-20 items-center justify-center overflow-hidden rounded-lg border border-slate-200 bg-slate-50"
+          >
+            <img
+              v-if="qrImage"
+              :src="qrImage"
+              alt="客服 / 公众号二维码"
+              class="h-full w-full object-contain"
+            />
+            <span v-else class="text-[10px] text-slate-400 px-1 text-center leading-snug">
+              在 props 里传入<br />qr-image
+            </span>
+          </div>
+          <div class="space-y-1">
+            <p class="text-xs font-medium text-slate-900">
+              方式二：微信扫码联系
+            </p>
+            <p class="text-xs text-slate-600">
+              使用微信扫一扫添加客服 / 关注公众号，发送
+              <span class="font-medium">“Media Studio AI”</span> 说明你的问题。
+            </p>
+          </div>
+        </div> -->
+
+       
       </div>
     </div>
   </section>

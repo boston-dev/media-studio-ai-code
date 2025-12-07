@@ -1,0 +1,31 @@
+{
+  "common": {
+    "homeTitle": "M3U8 提取下载",
+    "downloadClient": "下载 Media Studio AI 客户端（推荐）",
+    "latestVersion": "当前版本",
+    "osSupport": "支持系统",
+    "winClient": "立即下载 Windows 客户端 (.exe)",
+    "parse": "下载解析",
+    "clear": "清空",
+    "result": "解析结果",
+    "feedback": "交流与问题反馈",
+    "contactEmail": "联系邮箱",
+    "copy": "复制",
+    "privacyPolicy": "隐私政策"
+  },
+  "home": {
+    "clientDesc1": "由于浏览器存在限制，文件大小、权限、域名跨站和中断等问题，我们更推荐使用桌面客户端：所有操作均在本地完成。",
+    "clientDesc2": "支持多线程高速下载，不限速不易断。",
+    "clientDesc3": "多线程下载与本地解析、合并，安全可靠。",
+    "clientDesc4": "内置 M3U8 合并与 MP4 转换，无需任何第三方云端工具。",
+    "clientDesc5": "后续将集成更多 AI 媒体工具，一次安装长期使用。",
+    "inputM3u8": "m3u8 源地址（推荐带编号）",
+    "inputWebsite": "视频网页地址（可选）",
+    "inputPlaceholderM3u8": "请粘贴真实的 m3u8 地址",
+    "inputPlaceholderWeb": "请输入视频网页链接（可选）",
+    "tipLocal": "提示：本工具数据均在本地解析处理，不上传任何隐私信息。"
+  },
+  "footer": {
+    "rights": "© 2025 Media Studio AI"
+  }
+}

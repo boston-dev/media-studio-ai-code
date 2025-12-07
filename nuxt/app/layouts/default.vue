@@ -34,7 +34,7 @@
 
     <!-- 底部区 -->
     <footer class="text-center text-xs text-gray-500 mt-10">
-      © {{ year }} AI Tools · Vue3 模板（可商用二开）
+      © {{ year }} Media Studio AI
     </footer>
 
   </div>

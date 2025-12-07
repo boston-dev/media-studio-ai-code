@@ -1,0 +1,31 @@
+{
+  "common": {
+    "homeTitle": "M3U8 Extraction & Download",
+    "downloadClient": "Download Media Studio AI Client (Recommended)",
+    "latestVersion": "Current Version",
+    "osSupport": "Supported OS",
+    "winClient": "Download Windows Client (.exe)",
+    "parse": "Parse & Download",
+    "clear": "Clear",
+    "result": "Parsing Result",
+    "feedback": "Feedback & Support",
+    "contactEmail": "Contact Email",
+    "copy": "Copy",
+    "privacyPolicy": "Privacy Policy"
+  },
+  "home": {
+    "clientDesc1": "Due to browser restrictions such as file size limits, permissions and cross-domain issues, we strongly recommend using the desktop client: all operations are done locally.",
+    "clientDesc2": "Supports high-speed multi-threaded downloading with stable performance.",
+    "clientDesc3": "All decryption and merging are performed locally. Safe and reliable.",
+    "clientDesc4": "Built-in M3U8 → MP4 conversion. No external cloud tools required.",
+    "clientDesc5": "More AI media tools will be integrated into the client in the future.",
+    "inputM3u8": "M3U8 URL (long link recommended)",
+    "inputWebsite": "Video page URL (optional)",
+    "inputPlaceholderM3u8": "Paste the real m3u8 URL here",
+    "inputPlaceholderWeb": "Paste the video page URL (optional)",
+    "tipLocal": "Tip: All parsing is done locally. No personal data is uploaded."
+  },
+  "footer": {
+    "rights": "© 2025 Media Studio AI"
+  }
+}
