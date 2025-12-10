@@ -1,6 +1,3 @@
-        // "title": "porncvd - 素人av/免費A片/流出/性愛自拍/素人/成人無碼/免費成人/台灣自拍",
-        // "keywords": "上萬免費在線A片，最新番號中文字幕、無碼流出、Hentai、色情動漫、JAV、國產自拍、做愛av、素人av、免費A片、流出、性愛自拍、素人、成人無碼、免費成人、台灣自拍，出處你懂的",
-        // "desc": "上萬免費在線A片，最新番號中文字幕、無碼流出、Hentai、色情動漫、JAV、國產自拍、做愛av、素人av、免費A片、流出、性愛自拍、素人、成人無碼、免費成人、台灣自拍，出處你懂的",
-export const appName = 'porncvd - 素人av/免費A片/流出/性愛自拍/素人/成人無碼/免費成人/台灣自拍'
-export const appKeywords = '上萬免費在線A片，最新番號中文字幕、無碼流出、Hentai、色情動漫、JAV、國產自拍、做愛av、素人av、免費A片、流出、性愛自拍、素人、成人無碼、免費成人、台灣自拍，出處你懂的'
-export const appdesc="上萬免費在線A片，最新番號中文字幕、無碼流出、Hentai、色情動漫、JAV、國產自拍、做愛av、素人av、免費A片、流出、性愛自拍、素人、成人無碼、免費成人、台灣自拍，出處你懂的"
+export const appName = 'Media Studio AI - 跨平台 AI 媒体工具箱｜M3U8 提取下载与视频处理'
+export const appKeywords = 'Media Studio AI,M3U8,'
+export const appdesc="Media Studio AI 是一款基于 Electron 的跨平台 AI 媒体工具箱，目前主要提供 Windows 版本，支持一键提取 M3U8、下载 TS 切片并合并为 MP4，后续将扩展更多视频下载、转码与智能处理功能，全部本地运行，不上传视频，不收集隐私。"
