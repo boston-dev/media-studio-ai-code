@@ -57,7 +57,6 @@ export async function checkM3u8(url, timeout = 8000) {
     const statusCode = res.status
     const contentType = res.headers.get('content-type') || ''
     const text = await res.text()
-()
     clearTimeout(timer)
 
     if (statusCode < 200 || statusCode >= 300) {
@@ -73,7 +72,7 @@ export async function checkM3u8(url, timeout = 8000) {
     }
 
     if (/<!DOCTYPE HTML>/i.test(text) || /<HTML/i.test(text)) {
-         }
+    }
 
     const hasInf = upper.includes('#EXTINF:')
     const hasTs = /\.TS/.test(upper)
@@ -107,18 +106,12 @@ app.whenReady().then(() => {
   screenshots.on('ok', (e, buffer) => {
     const image = nativeImage.createFromBuffer(buffer)
     clipboard.writeImage(image)
-
-    // 截图完成恢复窗口
-    if (mainWindow) mainWindow.show()
-  })
-
-  screenshots.on('cancel', () => {
-    if (mainWindow) mainWindow.show()
+    // 截图完成恢复窗口 if (mainWindow) mainWindow.show()
   })
 
   // 快捷键（微信同款）
   globalShortcut.register('CommandOrControl+Alt+A', () => {
-    if (mainWindow) mainWindow.hide()
+    //if (mainWindow) mainWindow.hide()
     screenshots.startCapture()
   })
 
